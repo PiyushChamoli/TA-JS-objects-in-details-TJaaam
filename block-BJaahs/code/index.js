@@ -55,9 +55,9 @@ function createQuestion (title,option,index) {
     question.option = option;
     question.correctAnswerIndex = index;
     question.isCorrectAnswer = function (guessIndex) {
-        return question.correctAnswerIndex === guessIndex;
+        return this.correctAnswerIndex === guessIndex;
     };
     question.getCorrectAnswer = function () {
-        return question.option[question.correctAnswerIndex]
+        return this.option[this.correctAnswerIndex]
     }
 }
