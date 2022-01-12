@@ -80,8 +80,8 @@ class Square {
         return this.width*this.height;
     }
     set area (area) {
-        this.width = area/2;
-        this.height = area/2;
+        this.width = Math.sqrt(area);
+        this.height = Math.sqrt(area);
     }
 }
 ```
