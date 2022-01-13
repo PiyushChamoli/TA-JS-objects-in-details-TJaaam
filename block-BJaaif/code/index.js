@@ -5,7 +5,10 @@
 /*** CHALLENGE 1 of 1 ***/
 
 function makePerson(name, age) {
-  // add code here
+  return {
+    name: name,
+    age: age,
+  }
 }
 
 var vicky = makePerson('Vicky', 24);
@@ -21,7 +24,7 @@ var vicky = makePerson('Vicky', 24);
 /*** CHALLENGE 1 of 3 ***/
 
 var personStore = {
-  // add code here
+  greet: function () {console.log(`Hello`)},
 };
 
 // /********* Uncomment this line to test your work! *********/
@@ -30,7 +33,7 @@ var personStore = {
 /*** CHALLENGE 2 of 3 ***/
 
 function personFromPersonStore(name, age) {
-  // add code here
+  return
 }
 
 var sandra = personFromPersonStore('Sandra', 26);
