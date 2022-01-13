@@ -36,18 +36,18 @@ console.log(user.sayHello.call(user2, 'Hey')); // output / error : Hey Arya
 console.log(user.sayHello.apply(user2, ['Hey'])); // output / error : Hey Arya
 console.log(typeof user.sayHello.bind(user2)); // output / error : function
 console.log(user.sayHello.bind(user2)()); // output / error : Hello Arya
-console.log(userSayHello()); // output / error : Hello
+console.log(userSayHello()); // output / error : Hello undefined
 console.log(typeof userSayHello.bind(user2)); // output / error : function 
 console.log(userSayHello.bind(user2)()); // output / error : Hello Arya
-console.log(user3.sayHello()); // output / error : ERROR
+console.log(user3.sayHello()); // output / error : ERROR sayHello is not defined
 console.log(userSayHello.apply(user3)); // output / error : Hello Bran
 console.log(userSayHello.call(user3)); // output / error : HelloBran
 console.log(typeof new MainUser()); // output / error : object
-console.log(typeof new MainUser()); // output / error
-console.log(new MainUser().sayHello()); // output / error: 
-console.log(new MainUser().sayHello.call(user2)); // output / error
-console.log(new MainUser().sayHello.call(user)); // output / error
+console.log(typeof new MainUser()); // output / error : object
+console.log(new MainUser().sayHello()); // output / error: Hello tyrion
+console.log(new MainUser().sayHello.call(user2)); // output / error : Hello Arya
+console.log(new MainUser().sayHello.call(user)); // output / error : HelloJohn
 console.log(
   new MainUser().sayHello.apply(user, ['Welcome!'])
-); // output / error
+); // output / error : Welcome John
 ```
