@@ -27,6 +27,45 @@ Getter
 
 - `length`: returns the current length of the stack.
 
+
+```js
+// Stack Code
+
+class Stack {
+    constructor() {
+        this.data = [];
+    }
+    push (value) {
+        this.data.push(value);
+    }
+    pop () {
+        this.data.pop();
+    }
+    peek (index=this.data.length-1) {
+        return this.data[index];
+    }
+    reverse () {
+        let revArr = [];
+        for (let elm of this.data) {
+            revArr.unshift(elm);
+        }
+        return revArr
+    }
+    isEmpty () {
+        return !(this.data.length>0);
+    }
+    displayStack () {
+        return this.data.reduce((acc,cv) => {
+            acc += cv;
+            return acc;
+        }, '')
+    }
+    get length () {
+        return this.data.length;
+    }
+}
+```
+
 #### Test
 
 ```js
@@ -63,6 +102,33 @@ Methods:
 Getter
 
 - `length`: returns the current length of the stack.
+
+```js
+//Queue Code
+class Queue {
+    constructor () {
+        this.queue = [];
+    }
+    enqueue (item) {
+        this.queue.push(item);
+    }
+    dequeue () {
+        this.queue.shift();
+    }
+    peek (index=0) {
+        return this.queue[index];
+    }
+    isEmpty () {
+        return !(this.queue.length > 0);
+    }
+    displayQueue () {
+        return this.queue.join(' ');
+    }
+    get length () {
+        return this.queue.length;
+    }
+}
+```
 
 #### Test
 
