@@ -45,20 +45,13 @@ class Stack {
         return this.data[index];
     }
     reverse () {
-        let revArr = [];
-        for (let elm of this.data) {
-            revArr.unshift(elm);
-        }
-        return revArr
+        return this.data.sort(() => -1);
     }
     isEmpty () {
         return !(this.data.length>0);
     }
     displayStack () {
-        return this.data.reduce((acc,cv) => {
-            acc += cv;
-            return acc;
-        }, '')
+        return this.data.join(' ');
     }
     get length () {
         return this.data.length;
